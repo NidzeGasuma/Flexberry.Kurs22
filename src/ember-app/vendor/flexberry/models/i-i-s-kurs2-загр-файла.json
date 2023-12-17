@@ -1,0 +1,130 @@
+﻿{
+  "name": "IISKurs2ЗагрФайла",
+  "modelName": "i-i-s-kurs2-загр-файла",
+  "className": "ЗагрФайла",
+  "nameSpace": "IIS.Kurs2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "путьФайла",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "эксФайлы",
+      "relatedTo": "i-i-s-kurs2-экс-файлы",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЗагрФайлаE",
+      "modelName": "i-i-s-kurs2-загр-файла",
+      "attrs": [
+        {
+          "name": "путьФайла",
+          "caption": "Путь файла",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ЭксФайлы",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "дата",
+              "caption": "Дата",
+              "hidden": false,
+              "index": 0
+            },
+            {
+              "name": "репозиторий",
+              "caption": "Репозиторий",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "имя",
+              "caption": "Имя",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "default",
+          "caption": "Дата",
+          "name": "эксФайлы",
+          "relatedTo": "i-i-s-kurs2-экс-файлы",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ЗагрФайлаL",
+      "modelName": "i-i-s-kurs2-загр-файла",
+      "attrs": [
+        {
+          "name": "путьФайла",
+          "caption": "Путь файла",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ЭксФайлы",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "дата",
+              "caption": "Дата",
+              "hidden": false,
+              "index": 0
+            },
+            {
+              "name": "репозиторий",
+              "caption": "Репозиторий",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "имя",
+              "caption": "Имя",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Дата",
+          "name": "эксФайлы",
+          "relatedTo": "i-i-s-kurs2-экс-файлы",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
